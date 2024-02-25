@@ -1,0 +1,78 @@
+{
+  "_id": {
+    "$oid": "65db2eee1bbd9c35aebfb1a5"
+  },
+  "name": "test name",
+  "hidden": false,
+  "price_from": 100,
+  "size_m2": 100,
+  "location": "test location",
+  "short_description": {
+    "total_floors": 10,
+    "type": "test type",
+    "floor": "109",
+    "area": 10,
+    "rooms": 10
+  },
+  "pictures": [
+    "fsdsdf",
+    "2"
+  ],
+  "coordinates": {
+    "lng": "10",
+    "lat": "12"
+  },
+  "area": "421",
+  "about": {
+    "EN": {
+      "title": "1",
+      "description": "2"
+    },
+    "RU": {
+      "title": "test_tittle",
+      "description": "test_desc"
+    }
+  },
+  "amenities": [
+    "1",
+    "2"
+  ],
+  "floorPlans": {
+    "Studio": {
+      "price_from": 10,
+      "plans": [
+        {
+          "image": "1",
+          "name": "2",
+          "location": "3",
+          "description": {
+            "totalFloors": 10,
+            "type": "123",
+            "floor": 11,
+            "area": 10
+          },
+          "price_from": 1231,
+          "pricem2": 4214,
+          "planInfo": {
+            "condition": "1",
+            "type": "431",
+            "name": "1",
+            "woodwork": "1",
+            "floor": 2,
+            "heatingType": "1",
+            "hotWater": "1",
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "toilets": 1,
+            "terrace": false,
+            "kitchen": "1",
+            "buildedSurface": 1,
+            "usefulSurface": 1,
+            "terraceSurface": 1
+          }
+        }
+      ]
+    }
+  },
+  "_class": "com.example.propartes.projects.data.Project"
+}
