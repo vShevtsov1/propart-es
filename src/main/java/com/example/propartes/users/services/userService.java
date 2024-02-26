@@ -23,12 +23,17 @@ public class userService {
         User login_user = userRepo.findByEmail(loginDTO.getEmail());
         if(login_user!=null){
             if(passwordEncoder.matches(loginDTO.getPassword(),login_user.getPassword())){
-                return new loginResponseDTO("",loginStatus.OK);
+                return new loginResponseDTO(tokenServices.generateTokenUser(login_user), loginStatus.OK);
             }
             else {
-                return new loginResponseDTO(tokenServices.generateTokenUser(login_user), loginStatus.FAILED);
+                return new loginResponseDTO("",loginStatus.FAILED);
             }
         }
         return new loginResponseDTO("", loginStatus.FAILED);
+    }
+
+    public void createUser(loginDTO user){
+        User user1 = new User(user.getEmail(),passwordEncoder.encode(user.getPassword()));
+        userRepo.save(user1);
     }
 }

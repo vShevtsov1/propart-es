@@ -20,4 +20,8 @@ public class userController {
     public loginResponseDTO loginUser(@RequestBody loginDTO loginDTO){
         return userRepo.loginUser(loginDTO);
     }
+    @PostMapping("/create")
+    public void createUser(@RequestBody loginDTO loginDTO){
+         userRepo.createUser(loginDTO);
+    }
 }
