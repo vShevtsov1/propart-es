@@ -40,6 +40,7 @@ public class SecurityConfig {
                         .requestMatchers(AUTH_WHITELIST).permitAll()
                         .requestMatchers("/user/create").permitAll()
                         .requestMatchers("/user/login").permitAll()
+                        .requestMatchers("/amenity/id").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
