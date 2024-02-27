@@ -28,5 +28,7 @@ public class amenityController {
         amenityService.createAmenity(amenity);
     }
 
+    @GetMapping("/")
+    public List<Amenity> getAll(){return amenityService.getAll();}
 
 }

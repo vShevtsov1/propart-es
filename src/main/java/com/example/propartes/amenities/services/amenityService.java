@@ -20,4 +20,7 @@ public class amenityService {
     public List<Amenity> getAmenityById(List<String> id){
         return amenityRepo.findAllBy_idIn(id);
     }
+    public List<Amenity> getAll(){
+        return amenityRepo.findAll();
+    }
 }
